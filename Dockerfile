@@ -8,4 +8,5 @@ RUN apt-get update && apt-get install -y librsvg2-bin && apt-get clean && \
 	rm -rf /var/lib/apt/lists/* && \
 	pip install sphinx==$SPHINX_VERSION sphinx-bootstrap-theme==$SPHINX_BOOTSTRAP_VERSION sphinx-rtd-theme==$SPHINX_RTD_VERSION
 RUN pip install sphinxcontrib-versioning
+RUN pip install sphinxcontrib-httpdomain
 
