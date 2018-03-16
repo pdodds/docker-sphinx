@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y librsvg2-bin && apt-get clean && \
 RUN pip install sphinxcontrib-versioning
 RUN pip install sphinxcontrib-httpdomain
 RUN pip install sphinxcontrib-httpexample
-RUN pip install sphinxcontrib.fulltoc
+RUN pip install sphinxcontrib-fulltoc
