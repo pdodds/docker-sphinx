@@ -1,5 +1,5 @@
 
-FROM python:3.6
+FROM ubuntu:16.04
 
 ENV SPHINX_VERSION 1.7.6
 ENV SPHINX_BOOTSTRAP_VERSION 0.5.3
@@ -13,4 +13,4 @@ RUN pip install sphinxcontrib-httpdomain
 RUN pip install sphinxcontrib-httpexample
 RUN pip install sphinxcontrib-fulltoc
 RUN pip install rst2pdf
-RUN apt-get install -y texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk latex-xcolor texlive-luatex texlive-xetex
+RUN apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended 
