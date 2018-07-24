@@ -6,7 +6,7 @@ ENV SPHINX_BOOTSTRAP_VERSION 0.5.3
 ENV SPHINX_RTD_VERSION 0.4.0
 
 RUN apt-get update && apt-get install -y librsvg2-bin && apt-get clean && \
-	rm -rf /var/lib/apt/lists/* && \
+	rm -rf /var/lib/apt/lists/* &&  apt-get install -y python-pip && \
 	pip install sphinx==$SPHINX_VERSION sphinx-bootstrap-theme==$SPHINX_BOOTSTRAP_VERSION sphinx-rtd-theme==$SPHINX_RTD_VERSION
 RUN pip install sphinxcontrib-versioning
 RUN pip install sphinxcontrib-httpdomain
