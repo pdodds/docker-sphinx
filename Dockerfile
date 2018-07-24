@@ -1,9 +1,9 @@
 
 FROM python:3.6
 
-ENV SPHINX_VERSION 1.6.2
+ENV SPHINX_VERSION 1.7.6
 ENV SPHINX_BOOTSTRAP_VERSION 0.5.3
-ENV SPHINX_RTD_VERSION 0.2.5b1
+ENV SPHINX_RTD_VERSION 0.4.0
 
 RUN apt-get update && apt-get install -y librsvg2-bin && apt-get clean && \
 	rm -rf /var/lib/apt/lists/* && \
@@ -12,3 +12,5 @@ RUN pip install sphinxcontrib-versioning
 RUN pip install sphinxcontrib-httpdomain
 RUN pip install sphinxcontrib-httpexample
 RUN pip install sphinxcontrib-fulltoc
+RUN pip install rst2pdf
+RUN apt-get install -y texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk latex-xcolor texlive-luatex texlive-xetex
